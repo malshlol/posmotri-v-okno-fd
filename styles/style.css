@@ -10,6 +10,7 @@ html {
 
 .page {
   display: flex;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -17,7 +18,6 @@ html {
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
-  align-items: center;
 }
 
 h1,
@@ -86,8 +86,8 @@ ol {
   gap: 30px;
   width: 399px;
   height: 298px;
-  overflow-y: auto;
   padding: 0 3px 2px 2px;
+  overflow-y: auto;
 }
 
 .content__details {
@@ -185,8 +185,8 @@ ol {
   border-bottom: 1px solid #fff;
   color: #fff;
   background-color: transparent;
-  appearance: none;
   cursor: pointer;
+  appearance: none;
 }
 .search-form__textfield:has(:focus-visible) {
   outline: 1px solid #ffffff;
@@ -201,11 +201,11 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
+  position: relative;
   width: 19px;
   height: 19px;
   border: 1px solid #ffffff;
   padding: 1px;
-  position: relative;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -213,8 +213,8 @@ ol {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
   opacity: 0;
+  background-color: #ffffff;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -244,24 +244,22 @@ ol {
 }
 
 .button {
-  background: none;
-  border: none;
-  padding: 0;
   margin: 0;
+  border: 1px solid #ffffff;
+  padding: 6px 12px;
+  color: #ffffff;
   font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
   text-align: center;
-  padding: 6px 12px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  background: none;
   cursor: pointer;
 }
 
 .search-form__submit-button {
-  width: 194px;
   align-self: flex-end;
+  width: 194px;
 }
 
 .more-button {
@@ -315,4 +313,14 @@ ol {
 
 .content__list-item {
   padding: 0 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
